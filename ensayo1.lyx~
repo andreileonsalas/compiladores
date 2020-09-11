@@ -1,0 +1,844 @@
+#LyX file created by tex2lyx 2.3
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin C:/workspaces/compiladores/
+\textclass article
+\begin_preamble
+\usepackage{babel}
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding iso8859-15
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks 0
+\pdf_bookmarksnumbered 0
+\pdf_bookmarksopen 0
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks 0
+\pdf_pdfborder 0
+\pdf_colorlinks 0
+\pdf_backref section
+\pdf_pdfusetitle 0
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\lang spanish
+Apuntes del 5/10/2018
+\end_layout
+
+\begin_layout Author
+
+\lang spanish
+Andrei Leon Salas
+\end_layout
+
+\begin_layout Part
+
+\lang spanish
+Datos administrativos
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Las clases son los miercoles y viernes de 7:30 am a 9:20 am. Se va a utilizar teams y zoom para las clases, y la entrega de proyectos, tareas y apuntes por medio del foro 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://ec.tec.ac.cr/index.php/foro/"
+literal "false"
+
+\end_inset
+
+Si necesita acceso puede solicitarlo a la asistente del profesor Silvia 
+\begin_inset CommandInset href
+LatexCommand href
+name "silmeli97@gmail.com"
+target ""
+type "mailto:"
+literal "false"
+
+\end_inset
+
+. Se tiene que postear en el foro en 4 dias naturales o un poco mas para que quede bien con el siguiente formato: COM200904-k.pdf siendo k 1 si lo entrego de primero o 2 si lo posteo de segundo. El sentido de ser apuntador es aprender bien la materia ya que se tiene que poner mucha atencion en el momento que el profe habla para hacer buenos apuntes, y adicionalmente extender la informacion que dio el profe (con graficos, imagenes o informacion extra). Estos apuntes son revisados por el profe y tiene que venir bien su informacion para identificarse.
+\end_layout
+
+\begin_layout Section*
+
+\lang spanish
+Formas de contacto
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Correo electronico
+\begin_inset CommandInset href
+LatexCommand href
+name " Torresrojas.cursos.05@gmail.com"
+target ""
+type "mailto:"
+literal "false"
+
+\end_inset
+
+: este correo es exclusivo para este curso, cualquier tarea o proyecto entregado a otro correo se considera un cero 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Foro: 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://ec.tec.ac.cr/index.php/foro/ "
+target "http://ec.tec.ac.cr/index.php/foro/\%20"
+literal "false"
+
+\end_inset
+
+: es el medio oficial y se recomienda hacer las consultas aqui, para que tambien otros companeros puedan verlo y asi aclarar sus propias dudas 
+\end_layout
+
+\begin_layout Section*
+
+\lang spanish
+Evaluacion
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Tareas y quices [15%]: Se establecio que se haran los miercoles y no se reponen. Son individuales a menos que el profesor mencione lo contrario, y se utiliza el correo electronico como medio de entrega oficial. Todo trabajo escrito se debe utilizar LATEX. Los quices mas bajos se eliminaran al final del curso, para ayudar al estudiante, y esta es la razon por la que no se reponen los quices. Se hacen a MANO, hay que tomarle foto y enviarlo a Riquel 
+\begin_inset CommandInset href
+LatexCommand href
+name "driquelme2699@gmail.com"
+target ""
+type "mailto:"
+literal "false"
+
+\end_inset
+
+(NO enviar copia del correo al profesor). La entrega tardia se le quitaran 3
+\begin_inset Formula $^{k+1}$
+\end_inset
+
+ puntos donde k es cada dia de atraso. Las tareas que sean programadas se haran sobre C en Linux e individuales o en grupos de 3 dependiendo del enunciado. Si hay una revision y no se presenta nadie, es tambien un 0 automatico (en grupo tiene que estar aunque sea uno). Los ensayos tienen las siguientes fechas, tienen que ser en ingles y en LATEX, un resumen del material y una opinion personal o conclusion de lo que trataba el material. extension de 4 o 5 paginas. Se entregan directo al profesor 
+\begin_inset CommandInset href
+LatexCommand href
+name " Torresrojas.cursos.05@gmail.com"
+target ""
+type "mailto:"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\lang spanish
+Ensayo 1 Capitulo 1 Viernes 11 de septiembre 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Ensayo 2 Capitulo 2 Viernes 18 de septiembre 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Ensayo 3 Capitulo 3 Viernes 25 de septiembre 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Ensayo 4 Capitulo 4 Miercoles 4 de octubre 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Ensayo 5 Capitulo 5 Miercoles 14 de octubre 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\lang spanish
+Trabajo en clase [5%] 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Examen [15%] 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Examen [20%] 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Examen final [10%] 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Proyectos programadis [35%]: todos son hechos en C 
+\end_layout
+
+\begin_layout Section*
+
+\lang spanish
+Libros de texto 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Compiler Construction – Kenneth C. Louden 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Compiler Principles, Techniques, and tool – Alfred V. Aho, Ravi Sethi, Jeffrey D, Ullman (extra) 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Crafting a Compiler with C – Charles N. Fischer, Richard J.LeBlanc. Jr(extra) 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+The Language Instinct- Steven Pinker(extra) 
+\end_layout
+
+\begin_layout Section*
+
+\lang spanish
+Fraude academico
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Sera fuertemente penalizado cualquier tipo de fraude academico. El profe enfatizo mucho en esto, y que la escuela esta notando un incremento de esta mala practica. Hay que usar el sentido comun para saber si uno esta incurriendo en fraude pero ante la duda el profe dijo que con gusto el respondia correos con cualquier duda. Algunos ejemplos de fraude son: 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Usar el trabajo de otro como propio 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Conseguir de alguna forma adelantada los examenes o pruebas 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Usar recursos o cualquier otra cosa que adulteren la evaluacion de los examenes, proyectos, tareas, etc 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+NO es plagio utilizar informacion del foro de cursos pasados 
+\end_layout
+
+\begin_layout Part
+
+\lang spanish
+Historia
+\end_layout
+
+\begin_layout Section*
+
+\lang spanish
+Personas
+\end_layout
+
+\begin_layout Section*
+
+\lang spanish
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="6" columns="5">
+<features rotate="0" tabularvalignment="middle" tabularwidth="0pt">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+Nombre 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+Nacimiento 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+Universidad 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+Contribucion 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+Premio Turing o tasa de perro
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+John William Mauchly 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+USA 1907-1980 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+Johns Hopkins University 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+Co-creador de ENIAC 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+N/A
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+John Adam Presper Eckert 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+USA 1919-1995 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+Universidad de Pensilvania 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+Co-creador ENIAC 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+N/A
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+John von Neumann 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+Hungria 1903-1957 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+Universidad de Budapest 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+Arquitectura de computadores, proyecto manhatan, First Draft (Plagio?) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+N/A
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+Sir Maurice Vincent Wilkes 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+Britanico 1913-2010 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+Newcastle University 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+EDSAC,microprogramacion,subrutinas 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+1967
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+John Backus 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+USA 1924-2007 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+Columbia University 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+FORTRAN,primer lenguaje de alto nivel,BNF,FP 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\lang spanish
+1977
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\lang spanish
+Maquinas
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang spanish
+ENIAC
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Programable por medio de cables, era la primer computadora de proposito general, que se podia cambiar su funcion sin tener que crear la maquina desde cero. Costo medio millon de dolares (9 millones con la inflacion actual). Tenia un tiempo de funcionamiento del 50%, y eran mujeres quienes principamente se encargaban de toda la programacion de esta Le decian 
+\begin_inset Quotes fld
+\end_inset
+
+Giant Brain
+\begin_inset Quotes frd
+\end_inset
+
+ segun la prensa, e igual hubo historias de terror de que las computadoras dominarian el mundo (no tan alejado de la realidad poniendonos filosoficos)
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang spanish
+EDVAC
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Programable pero en vez de ser cables, se hacia en memoria, muy inovador en la epoca, tanto que aun ahora se utiliza esta misma idea. Se empezo a trabajar desde antes que ENIAC estuviera lista, y fue funcional 20 horas diarias con un MTBF (MEAN TIME BETWEEN FAILURES) de 8 horas. Costo para su momento medio millon de dolares (6643615 millones de dolares actuales)
+\end_layout
+
+\begin_layout Section*
+
+\lang spanish
+Contribuciones
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang spanish
+First draft
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Fue un ensayo sobre el funcionamiento de EDVAC que circulo en 1945, Se habla mucho de que fue un fraude academico de John von neumann hacian Mauchly y Presper, junto con este documento se propuso la arquitectura von Neumann
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang spanish
+Arquitectura von Neumann
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Prupuesta en 1945 por von Neumann, se comenta que tubo influencia de Turing y que pudo tener ideas robadas de otros academicos. Basicamente es la primera arquitectura que integraba la idea del software. Usando un programa que se lee en la memoria, y ejecutandolo indefinidamente con un ciclo de fetch. Escencialmente el software
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang spanish
+Unidad de control 
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Es el responsable de ejecutar el ciclo de fetch, tiene de forma simple los pasos definidos de estar recuperando en memoria las instrucciones, ejecutarlas, y volver al primer paso indefinidamente, siendo estas instrucciones posibles de cambiar el estado de la maquina y ejecutar de forma diferente. No existia antes del EDVAC
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang spanish
+Diseno de la unidad de control
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Existen dos tipos de disenos, el alambrado que trata de hacer todas las instrucciones por medios fisicos (compuertas logicas por ejemplo) y el microprogramado que es tener un peuqeno programa con esas instrucciones pero por software, no por hardware. La primera es mas eficiente pero la segunda mas flexible, ya que en la primera no se pueden agregar instrucciones sin tener que recrear todo, y en la segunda si podemos agregar sin tener que construir de nuevo el hardware. Cabe destacar que microprogramada es que ya el set de instrucciones viene hecho y no se puede cambiar, la microprogramable es la que se puede cambiar
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang spanish
+Niveles de eficiencia y dificultad
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Como vimos antes, las instrucciones hechas en hardware son mas rapidas pero menos eficientes. Esta regla se cumple generalmente entre mas bajo se programa mas eficiente va a ser. Un sistema hecho a partir de microprogramas va a ser mucho mas veloz que en java, pero va a ser muy lento crear ese codigo. A esto se le llama brecha semantica. un sistema asi seria muy eficiente pero poco productivo. 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Eficiencia: cantidad de recursos que un sistema en funcionamiento requiere (el programa que uno hace es eficiente, no la persona) 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Productividad: la cantidad de lineas de codigo sin errores por unidad de tiempo al desarrollar un sistema (la persona es quien es productivo, no el programa hecho) 
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+En microprogramacion la eficiencia es alta pero la productividad baja. En lenguaje maquina la eficiencia baja pero la productividad sube. Pero en lenguaje ensamblador para una excepcion, la producitivdad sube pero la eficiencia no baja.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang spanish
+Lenguaje ensamblador
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Por no ser tan semantico, es muy tedioso y propenso a errores, por lo que en 1950 se crea ensamblador, que crea nemonicos y nombres simbolicos para poder generar lenguaje maquina. Como es equivalente lo generado por ensamblador a lenguaje maquina es igual de eficiente pero mucho mas facil de utilizar 
+\end_layout
+
+\end_body
+\end_document
