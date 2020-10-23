@@ -1,0 +1,244 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+THE ASSEMBLY LANGUAGE LEVEL
+\end_layout
+
+\begin_layout Date
+Date 10/11/20
+\end_layout
+
+\begin_layout Author
+
+\lang spanish
+Andrei León Salas
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+For a certain program, 2% of the code accounts for 50% of the execution
+ time.
+ Compare the following three strategies with respect to programming time
+ and execution time.
+ Assume that it would take 100 man-months to write it in C, and that assembly
+ code is 10 times slower to write and four times more efficient
+\end_layout
+
+\begin_layout Subsection
+Entire program in C
+\end_layout
+
+\begin_layout Standard
+It would take 100 man-months to write it.
+ It is going to be 4 times slower than assembly
+\end_layout
+
+\begin_layout Subsection
+Entire program in assembler
+\end_layout
+
+\begin_layout Standard
+It would take 100 man-months to write it, It is going to be 4 times faster
+ than c
+\end_layout
+
+\begin_layout Subsection
+First all in C, then the key 2% rewritten in assembler
+\end_layout
+
+\begin_layout Standard
+It would take 100 man-months to write it.
+ It is going to be 4 times slower than assembly.
+ it is going to take 2 man-months to rewrite the 2% part of the code (for
+ a total of 102 man-months) but it is going to be only 2 times slower than
+ assembly, and 50% faster than in c
+\end_layout
+
+\begin_layout Section
+What is the difference between an instruction and a pseudoinstruction?
+\end_layout
+
+\begin_layout Standard
+An instruction is a command to the assembler to execute something, like
+ a representation of a machine instruction.
+ A pseudoinstruction is a command to the assembler itself, also called assembler
+ directives.
+ It can be an instructions to tell the assembler to allocate some storage
+ or to eject to a new page on the listing.
+ In other wods, a pseudoinstrucion cannot be processed directly into machine
+ code, as it represent something, but a instruction has a specific command
+ equivalente to machine code
+\end_layout
+
+\begin_layout Section
+Programs often link to multiple DLLs.
+ Would it not be more efficient just to put all the procedures in one big
+ DLL and then link to it?
+\end_layout
+
+\begin_layout Standard
+The lecture points out that one advantage is to save memory on disk and
+ memory, so asking for all the dll's if i only needed one or 2, would be
+ a waste of memory and disk.
+ Also it makes it easy to update library procedures, even after the programs
+ using them have been compiled and linked.
+\end_layout
+
+\begin_layout Section
+Can a DLL be mapped into two process’ virtual address spaces at different
+ virtual addresses? If so, what problems arise? Can they be solved? If not,
+ what can be done to eliminate them?
+\end_layout
+
+\begin_layout Standard
+yes it can be mapped into two process's virtual address at various virtual
+ address.
+ The problem is relocation problem, where if an object change their address,
+ affects all the others.
+ The fix is done via explicit linking, where the dll's makes the call during
+ run time, and makes additional calls to get the addresses of procedures
+ it needs.
+\end_layout
+
+\begin_layout Section
+One way to do (static) linking is as follows.
+ Before scanning the library, the linker builds a list of procedures needed,
+ that is, names defined as EXTERN in the modules being linked.
+ Then the linker goes through the library linearly, extracting every procedure
+ that is in the list of names needed.
+ Does this scheme work? If not, why not and how can it be remedied?
+\end_layout
+
+\begin_layout Standard
+No as the instructions would be in different positions, it is the relocation
+ problem, and in the translation step, the assembler may not know what address
+ the procedure is called in another function, this is the external reference
+ problem.
+ It is fixed as the linker merges the separate address spaces of the object
+ modules into a single linear address space using these steps
+\end_layout
+
+\begin_layout Enumerate
+It constructs a table of all the object modules and their lengths.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Based on this table, it assigns a base address to each object module.
+ 
+\end_layout
+
+\begin_layout Enumerate
+It finds all the instructions that reference memory and adds to each a relocatio
+n constant equal to the starting address of its module.
+ 
+\end_layout
+
+\begin_layout Enumerate
+It finds all the instructions that reference other procedures and inserts
+ the address of these procedures in place
+\end_layout
+
+\begin_layout Section
+A linker reads five modules, whose lengths are 200, 800, 600, 500, and 700
+ words, respectively.
+ If they are loaded in that order, what are the relocation constants? 
+\end_layout
+
+\begin_layout Standard
+0,200,1000,1600,2100
+\end_layout
+
+\end_body
+\end_document
